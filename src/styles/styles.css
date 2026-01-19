@@ -535,6 +535,172 @@ header {
     }
 }
 
+/* ============================================================
+   SEÇÃO ROADMAP (PASSO A PASSO)
+   ============================================================ */
+#roadmap {
+    padding: 100px 8%;
+    background-color: var(--color-primary-1); /* Fundo Preto */
+    text-align: center;
+    position: relative;
+}
+
+#roadmap .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas alinhadas */
+    gap: 25px;
+    margin-top: 60px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.step-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--color-primary-4);
+    transform: translateY(-5px);
+}
+
+/* NÚMERO DO PASSO AO FUNDO */
+.step-number {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(204, 0, 0, 0.1); /* Vermelho bem transparente */
+    font-family: 'Poppins', sans-serif;
+}
+
+.step-icon {
+    font-size: 2.2rem;
+    color: var(--color-primary-4);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.step-card h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.step-card p {
+    color: #a1a1a6;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1100px) {
+    #roadmap .roadmap-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 no Tablet */
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #roadmap .roadmap-grid {
+        grid-template-columns: 1fr; /* 1x1 no Celular */
+    }
+    
+    #roadmap {
+        padding: 70px 5%;
+    }
+}
+
+/* ============================================================
+   SEÇÃO POR QUE NOS ESCOLHER
+   ============================================================ */
+#porque-escolher {
+    padding: 100px 8%;
+    background-color: var(--color-primary-1); /* Volta para o fundo preto */
+    text-align: center;
+}
+
+#porque-escolher .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+    gap: 25px;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* O PAINEL FLUTUANTE (ESTILO APPLE GLASS) */
+.floating-card {
+    background: rgba(255, 255, 255, 0.03); /* Fundo sutil */
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.floating-card:hover {
+    transform: translateY(-12px); /* Efeito de flutuar */
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-primary-4); /* Borda vermelha no hover */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary-4);
+    margin-bottom: 20px;
+}
+
+.floating-card h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.floating-card p {
+    color: #a1a1a6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* AJUSTES PARA O 5º CARD (Centralizar se houver 3 colunas) */
+.floating-card:nth-child(4), .floating-card:nth-child(5) {
+    /* Opcional: Estilos específicos para os cards da linha de baixo */
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1100px) {
+    #porque-escolher .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #porque-escolher .cards-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+    
+    #porque-escolher {
+        padding: 60px 5%;
+    }
+}
+
 /* ==========================================================================
    FAQ SECTION (Clean & Sharp)
    ========================================================================== */
